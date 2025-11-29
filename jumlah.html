@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menghitung Jumlah Dua Bilangan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 250px;
+            margin: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        p {
+            font-size: 20px;
+            margin: -5px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Menghitung Jumlah Dua Bilangan</h3>
+
+<input type="number" id="angka1" onchange="hitung()" placeholder="Masukkan angka pertama">
+<p>+</p>
+<input type="number" id="angka2" onchange="hitung()" placeholder="Masukkan angka kedua">
+<p>=</p>
+<input type="number" id="hasil" readonly placeholder="Hasil penjumlahan">
+
+<script>
+    function hitung() {
+        let a = parseFloat(document.getElementById("angka1").value) || 0;
+        let b = parseFloat(document.getElementById("angka2").value) || 0;
+
+        document.getElementById("hasil").value = a + b;
+    }
+</script>
+
+</body>
+</html>
